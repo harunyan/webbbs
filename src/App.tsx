@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import './CSS/webbbs.css';
 import {Route, Routes} from "react-router-dom";
 import Home from "./Home";
 import NotFound from "./NotFound";
+import Thread from "./Thread";
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
             </ul>
             <Routes>
                 <Route path="/" element={<Home />}/>
+                <Route path="/post/:id" element={<Thread />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
