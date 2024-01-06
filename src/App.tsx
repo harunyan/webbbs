@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import './CSS/webbbs.css';
+import {Route, Routes} from "react-router-dom";
+import Home from "./Home";
+import NotFound from "./NotFound";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <div className="App">
+            <h1>Router v6</h1>
+            <ul>
+                <li>
+                    <a href={"/"}>Home</a>
+                </li>
+                <li>
+                    <a href={"/about"}>About</a>
+                </li>
+            </ul>
+            <Routes>
+                <Route path="/" element={<Home />}/>
+                <Route path="/about" element={<About />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </div>
+    )
+}
+
+const About = () => {
+    return <h2>About</h2>;
 }
 
 export default App;

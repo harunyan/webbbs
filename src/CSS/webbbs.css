@@ -1,0 +1,24 @@
+div.Thread-table
+{
+    display: table;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+div.Thread-row
+{
+    display: table-row;
+}
+
+div.Thread-header {
+    display: table-cell;
+    border: 1px solid;
+    font-size: large;
+}
+
+div.Thread-item {
+    display: table-cell;
+    table-layout: fixed;
+    border: 1px solid;
+    padding: 0rem 1rem;
+}
