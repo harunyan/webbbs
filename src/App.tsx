@@ -19,7 +19,7 @@ const App = () => {
                 </li>
             </ul>
             <Routes>
-                <Route path="/" element={<Home />}/>
+                <Route path="/" element={<Home />} />
                 <Route path="/post/:id" element={<Thread />} />
                 <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
